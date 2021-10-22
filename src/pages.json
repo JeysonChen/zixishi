@@ -1,7 +1,35 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [
 		{
-			"path": "pages/index/index",
+			"path": "pages/forum/detail",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/forum/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "论坛"
+			}
+		},
+		{
+			"path": "pages/reserve/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/messages/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/mine/index",
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
@@ -10,7 +38,39 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#fff",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#C0C4CC",
+		"selectedColor": "#fbbd08",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/forum/index",
+				"iconPath": "static/images/icons/tab-home.png",
+				"selectedIconPath": "static/images/icons/tab-home-yellow.png",
+				"text": "论坛"
+			}, 
+			{
+				"pagePath": "pages/reserve/index",
+				"iconPath": "static/images/icons/tab-cate.png",
+				"selectedIconPath": "static/images/icons/tab-cate-yellow.png",
+				"text": "订座"
+			},
+			{
+				"pagePath": "pages/messages/index",
+				"iconPath": "static/images/icons/tab-notify.png",
+				"selectedIconPath": "static/images/icons/tab-notify-yellow.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/mine/index",
+				"iconPath": "static/images/icons/tab-my.png",
+				"selectedIconPath": "static/images/icons/tab-my-yellow.png",
+				"text": "我的"
+			}
+		]
 	}
 }
